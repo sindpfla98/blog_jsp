@@ -1,0 +1,6 @@
+<a class="btn btn-secondary waves-effect waves-light"
+    href="<c:url value='/views/dashboard/index_new.jsp'/>">취소</a>
+
+c:url  의미 설명
+
+ 

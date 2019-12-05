@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MYSQL_회원가입_MVC_01</title>
+<script>
+	function Insert() {
+		if(wooriInsert.id.value == ""){
+			alert("사용자ID가 입력되지 않았습니다.");
+			wooriInsert.id.focus();
+			return false;}
+		if(wooriInsert.password.value == ""){
+			alert("암호가 입력되지 않았습니다.");
+			wooriInsert.password.focus();
+			return false;}
+		if(wooriInsert.name.value == ""){
+			alert("이름이 입력되지 않았습니다.");
+			wooriInsert.name.focus();
+			return false;}
+		if(wooriInsert.email.value == ""){
+			alert("E-MAIL이 입력되지 않았습니다.");
+			wooriInsert.email.focus();
+			return false;}
+		wooriInsert.action = "insert_action.jsp"
+			wooriInsert.submit();
+		alert("회원정보가 등록 되었습니다.");
+	}
+</script>
+</head>
+<body>
+<form name="wooriInsert" method="post" action="insert_action.jsp">
+사용자ID<input type="text" name="id"><br/>
+암호<input type="text" name="password"><br/>
+이름<input type="text" name="name"><br/>
+E-MAIL<input type="text" name="email"><br/>
+<input value="확인" type="button" ONCLICK="Insert()">
+<!-- <input value="확인" type="submit"> -->
+<input value="취소" type="button" ONCLICK="document.location.href='index.html'">
+</form> 
+</body>
+</html>
